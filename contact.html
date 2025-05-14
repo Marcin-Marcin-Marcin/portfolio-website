@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marcin's page | About</title>
+        <link rel="shortcut icon" href="./img/favicon-32x32.png">
+        <link rel="stylesheet" href="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
+            <nav>
+                <ul role="menubar">
+                    <li role="presentation"> <a role="menuitem" href="index.html">Home</a></li>
+                    <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
+                    <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
+                    <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Contact me</h1>
+            <ul>
+               <li>
+                    <a href="mailto:mtbiesiada@gmail.com">mail: mtbiesiada@gmail.com</a>
+                </li>
+                <li>
+                    <a href="tel:+4917621832353">telephone: +4917621832353</a>
+                </li>
+            </ul>
+            <h3>
+                <a href="mailto:mtbiesiada@gmail.com">Send me an e-mail</a>
+            </h3>
+
+            <h2>Contact</h2>
+    <form action="send-the-form" method="post" id="contact-form">
+      <div>
+          <label class="standard-label" for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name*" required/>
+      </div>
+      <br>
+      <div>
+          <label class="standard-label" for="email">Email</label>
+          <input type="email" id="email" name="email"  placeholder="Your Email*" required/>
+      </div>
+      <br>
+      <div>
+          <label class="standard-label" for="message">Message</label>
+          <textarea id="message" name="message" rows="6" cols="18" id="message" name="message" placeholder="Your Message"></textarea>
+      </div>
+      <br>
+      <div>
+          <input type="checkbox" id="checkbox" name="checkbox" required>I read and understood <a href="#">Terms and Conditions</a></input>
+      </div>
+      <br>
+      <div>
+        <button type="submit" role="button" id="button">Send</button>
+      </div>
+        </main>
+        <footer>
+            <h3>Find me on</h3>
+            <section class="logos">
+                 <!--- Github logo-->
+                <img src="img/githubicon.svg" width="30" alt="Github logo">
+                <!--- Bluesky logo-->
+                <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
+                <!--- Linkedin logo-->
+                <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
+            </section>
+        </footer>
+        <script src="js/tota11y.min.js"></script>
+   </body>
+</html>
