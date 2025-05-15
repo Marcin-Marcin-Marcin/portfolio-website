@@ -352,6 +352,32 @@ main {
   background-color: #f3f6fd;
   padding: 20px 20px 25px;
   text-align: left;
+  -webkit-transition: -webkit-transform 0.02s ease;
+  transition: -webkit-transform 0.02s ease;
+  -o-transition: transform 0.02s ease;
+  transition: transform 0.02s ease;
+  transition: transform 0.02s ease, -webkit-transform 0.02s ease;
+}
+
+.grid__item:hover {
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
+}
+
+.grid__item:last-child {
+  -ms-grid-column: 3;
+  grid-column: 3 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+.advanced-python {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
 }
 
 .profile {
@@ -513,6 +539,16 @@ main {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
+
+  .advanced-python {
+        -ms-grid-column-span: 1;
+        grid-column: span 1;
+    }
+
+  .grid__item:last-child {
+  grid-column: auto;
+  grid-row: auto;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -527,6 +563,16 @@ main {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .advanced-python {
+        -ms-grid-column-span: 1;
+        grid-column: span 1;
+    }
+
+  .grid__item:last-child {
+  grid-column: auto;
+  grid-row: auto;
   }
 
   .profile {
