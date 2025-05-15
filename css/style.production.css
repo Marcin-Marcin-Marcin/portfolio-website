@@ -505,6 +505,10 @@ main {
     font-size: 36px;
   }
 
+  h3 {
+    font-size: 24px;
+  }
+
   .grid {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -514,6 +518,10 @@ main {
 @media all and (max-width: 500px) {
   h1 {
     font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
   }
 
   .grid {
