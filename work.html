@@ -10,44 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-      /* make entire tile clickable without changing layout */
-      .tile-link {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--grid-background);
-        padding: 20px 20px 25px;
-        text-decoration: none;
-        color: inherit;
-        transition: transform 0.02s ease;
-        height: 100%;
-      }
-      .tile-link:hover {
-        transform: scale(1.01);
-        box-shadow: 0 1px 2px rgba(0,0,0,0.09);
-      }
-      .tile-link .card__media {
-        width: 100%;
-        height: 240px;
-        background-color: var(--grid-background);
-        border-radius: 6px;
-        margin-bottom: 12px;
-        background-size: cover;
-        background-position: center;
-      }
-      .tile-link h4 { margin: 4px 0 6px; }
-      .tile-link p {
-        margin-bottom: 12px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .tile-link .card__actions { margin-top: auto; }
-      .tile-link .button {
-        pointer-events: none; /* visual only; whole tile is the link */
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -66,67 +28,88 @@
       <h1 id="mywork">My Work</h1>
 
       <div class="grid">
-        <a class="grid__item tile-link" href="pokedex.html" aria-label="Open Pokedex App project">
-          <div class="card__media" aria-hidden="true"></div>
+        <!-- Pokedex -->
+        <article class="grid__item">
+          <a href="pokedex.html" class="card__media-link" aria-label="Open Pokedex App project">
+            <div class="card__media" aria-hidden="true"></div>
+          </a>
           <h4>Pokedex App</h4>
           <p>A small app that fetches Pokémon data from an API.</p>
           <div class="card__actions">
-            <span class="button">See Project</span>
+            <a href="pokedex.html" class="button">See Project</a>
           </div>
-        </a>
+        </article>
 
-        <a class="grid__item tile-link" href="movie-api.html" aria-label="Open myFlix Movie API project">
-          <div class="card__media" aria-hidden="true"></div>
+        <!-- Movie API -->
+        <article class="grid__item">
+          <a href="movie-api.html" class="card__media-link" aria-label="Open Movie API project">
+            <div class="card__media" aria-hidden="true"></div>
+          </a>
           <h4>Movie API</h4>
           <p>Server-side API for movie data and user management.</p>
           <div class="card__actions">
-            <span class="button">See Project</span>
+            <a href="movie-api.html" class="button">See Project</a>
           </div>
-        </a>
+        </article>
 
-        <a class="grid__item tile-link" href="myflix.html" aria-label="Open myFlix React Client project">
-          <div class="card__media" aria-hidden="true"></div>
+        <!-- myFlix -->
+        <article class="grid__item">
+          <a href="myflix.html" class="card__media-link" aria-label="Open myFlix project">
+            <div class="card__media" aria-hidden="true"></div>
+          </a>
           <h4>myFLix</h4>
           <p>Client-side movie app built with React.</p>
           <div class="card__actions">
-            <span class="button">See Project</span>
+            <a href="myflix.html" class="button">See Project</a>
           </div>
-        </a>
+        </article>
 
-        <a class="grid__item tile-link" href="meet-app.html" aria-label="Open Meet App project">
-          <div class="card__media" aria-hidden="true"></div>
+        <!-- Meet App -->
+        <article class="grid__item">
+          <a href="meet-app.html" class="card__media-link" aria-label="Open Meet App project">
+            <div class="card__media" aria-hidden="true"></div>
+          </a>
           <h4>Meet App</h4>
           <p>PWA built with React and serverless functions.</p>
           <div class="card__actions">
-            <span class="button">See Project</span>
+            <a href="meet-app.html" class="button">See Project</a>
           </div>
-        </a>
+        </article>
 
-        <a class="grid__item tile-link" href="chat-app.html" aria-label="Open Chat App project">
-          <div class="card__media" aria-hidden="true"></div>
+        <!-- Chat App -->
+        <article class="grid__item">
+          <a href="chat-app.html" class="card__media-link" aria-label="Open Chat App project">
+            <div class="card__media" aria-hidden="true"></div>
+          </a>
           <h4>Chat App</h4>
           <p>Mobile chat app built with React Native and Firebase.</p>
           <div class="card__actions">
-            <span class="button">See Project</span>
+            <a href="chat-app.html" class="button">See Project</a>
           </div>
-        </a>
+        </article>
 
-        <a class="grid__item tile-link" href="#" aria-label="Open MyFlix-Angular project">
-          <div class="card__media" aria-hidden="true"></div>
+        <!-- MyFlix-Angular (placeholder) -->
+        <article class="grid__item">
+          <a href="#" class="card__media-link" aria-label="Open MyFlix-Angular project">
+            <div class="card__media" aria-hidden="true"></div>
+          </a>
           <h4>MyFlix-Angular</h4>
           <p>Angular version of the myFlix app.</p>
           <div class="card__actions">
-            <span class="button">See Project</span>
+            <a href="#" class="button">See Project</a>
           </div>
-        </a>
+        </article>
       </div>
     </main>
 
     <footer>
       <h3>Find me on</h3>
       <section class="logos">
+        <!--- Github logo-->
         <img src="img/githubicon.svg" width="30" alt="Github logo">
+        <!--- Bluesky logo-->
         <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
+        <!--- Linkedin logo-->
         <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
       </section>
     </footer>
