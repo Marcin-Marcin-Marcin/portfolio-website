@@ -19,7 +19,24 @@
       @media (min-width: 900px) { .project-columns { grid-template-columns:1fr 1fr; gap:28px; } }
       .backlink { display:inline-block; margin:0 0 16px; }
       .links-row { margin:15px 0 30px; display:flex; gap:15px; flex-wrap:wrap; }
-      .project-image { height:400px; background-color:var(--grid-background); }
+
+      /* Project image styling */
+      .project-image {
+        height: 400px;
+        background-color: #f3f6fd; /* fixed background */
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -43,7 +60,10 @@
         The myFlix API is a backend service built with Node.js, Express, and MongoDB. It serves as the server-side component for the myFlix web application, providing users with secure access to movie data, user management features, and authentication.
       </p>
 
-      <div class="card__media project-image" aria-label="myFlix Movie API preview image placeholder"></div>
+      <!-- Project image -->
+      <div class="project-image">
+        <img src="img/api.png" alt="Preview of the myFlix Movie API project">
+      </div>
 
       <section class="links-row">
         <a href="#" target="_blank" rel="noopener" class="button__secondary">See on Github</a>
