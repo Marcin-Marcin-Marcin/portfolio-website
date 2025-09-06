@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
+      main {
+        max-width: 75%;
+        margin: 0 auto;
+      }
       .project-columns {
         display: grid;
         grid-template-columns: 1fr;
@@ -21,7 +25,7 @@
         padding-left: 20px;
       }
       .project-columns li {
-        margin-bottom: 14px; /* more spacing between list items */
+        margin-bottom: 14px;
       }
       @media (min-width: 900px) {
         .project-columns {
@@ -39,6 +43,10 @@
         gap: 15px;
         flex-wrap: wrap;
       }
+      .project-image {
+        height: 400px; /* increased from 300px */
+        background-color: var(--grid-background);
+      }
     </style>
   </head>
   <body>
@@ -55,7 +63,7 @@
     </header>
 
     <main>
-      <!-- Backlink moved above title -->
+      <!-- Backlink above title -->
       <a class="backlink" href="work.html">← Back to Work</a>
       <h1>Pokédex App</h1>
 
@@ -64,11 +72,10 @@
         The app fetches data from the PokéAPI and displays it in an interactive list, allowing users to view detailed information about each Pokémon.
       </p>
 
-      <!-- Image placeholder -->
+      <!-- Taller image placeholder -->
       <div
-        class="card__media"
+        class="card__media project-image"
         aria-label="Pokédex App preview image placeholder"
-        style="height:300px;background-color:var(--grid-background);"
       ></div>
 
       <!-- Two-column content -->
@@ -105,7 +112,7 @@
         </div>
       </section>
 
-      <!-- Links row with two buttons -->
+      <!-- Links row -->
       <section class="links-row">
         <a href="#" target="_blank" rel="noopener" class="button">See on Github</a>
         <a href="#" target="_blank" rel="noopener" class="button">See Live Project</a>
@@ -115,11 +122,8 @@
     <footer>
       <h3>Find me on</h3>
       <section class="logos">
-        <!--- Github logo-->
         <img src="img/githubicon.svg" width="30" alt="Github logo">
-        <!--- Bluesky logo-->
         <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
-        <!--- Linkedin logo-->
         <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
       </section>
     </footer>
