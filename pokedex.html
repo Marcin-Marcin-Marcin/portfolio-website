@@ -38,13 +38,13 @@
         margin: 0 0 16px;
       }
       .links-row {
-        margin-top: 20px;
+        margin: 15px 0 30px;
         display: flex;
         gap: 15px;
         flex-wrap: wrap;
       }
       .project-image {
-        height: 400px; /* increased from 300px */
+        height: 400px; /* taller placeholder */
         background-color: var(--grid-background);
       }
     </style>
@@ -78,6 +78,12 @@
         aria-label="Pokédex App preview image placeholder"
       ></div>
 
+      <!-- Secondary buttons under image -->
+      <section class="links-row">
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See on Github</a>
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See Live Project</a>
+      </section>
+
       <!-- Two-column content -->
       <section class="project-columns">
         <div>
@@ -110,12 +116,6 @@
             how to fetch and display data efficiently while handling user interactions smoothly.
           </p>
         </div>
-      </section>
-
-      <!-- Links row -->
-      <section class="links-row">
-        <a href="#" target="_blank" rel="noopener" class="button">See on Github</a>
-        <a href="#" target="_blank" rel="noopener" class="button">See Live Project</a>
       </section>
     </main>
 
