@@ -169,6 +169,12 @@ button {
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
+/* Keep link-buttons legible after being visited */
+.button:visited,
+.button__secondary:visited {
+  color: #e0e0e0;
+}
+
 button:hover {
   background-color: #0428a8;
   color: #fff;
@@ -236,6 +242,11 @@ button:active {
   -o-transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+/* Keep secondary link-buttons legible after being visited (on white bg) */
+.button__secondary:visited {
+  color: #e0e0e0;
 }
 
 .button__secondary:hover {

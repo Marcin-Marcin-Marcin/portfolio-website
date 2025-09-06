@@ -148,6 +148,12 @@ button,
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
+/* Keep link-buttons legible after being visited */
+.button:visited,
+.button__secondary:visited {
+  color: #e0e0e0;
+}
+
 button:hover,
 button:focus,
 .button:hover,
