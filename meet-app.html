@@ -19,7 +19,24 @@
       @media (min-width: 900px) { .project-columns { grid-template-columns:1fr 1fr; gap:28px; } }
       .backlink { display:inline-block; margin:0 0 16px; }
       .links-row { margin:15px 0 30px; display:flex; gap:15px; flex-wrap:wrap; }
-      .project-image { height:400px; background-color:var(--grid-background); }
+
+      /* Project image styling */
+      .project-image {
+        height: 400px;
+        background-color: #f3f6fd;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -43,7 +60,10 @@
         The Meet App is a progressive web application (PWA) designed to help users discover upcoming events in different cities. Built with React and powered by serverless functions, it provides a fast, reliable, and cross-platform experience that works seamlessly online and offline.
       </p>
 
-      <div class="card__media project-image" aria-label="Meet App preview image placeholder"></div>
+      <!-- Project image -->
+      <div class="project-image">
+        <img src="img/meet.png" alt="Preview of the Meet App project">
+      </div>
 
       <section class="links-row">
         <a href="#" target="_blank" rel="noopener" class="button__secondary">See on Github</a>
