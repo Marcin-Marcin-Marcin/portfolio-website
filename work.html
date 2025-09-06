@@ -18,19 +18,19 @@
 
       /* Ensure strict image area, then text — no overlap */
       .card__media {
-        height: 240px;                      /* same as your tile design */
+        height: 240px;                      /* desktop */
         background-color: var(--grid-background);
         border-radius: 6px;
         margin-bottom: 12px;
-        display: flex;                      /* center the image nicely */
+        display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;                   /* hide any image spill */
+        overflow: hidden;
       }
       .card__media img {
         width: 100%;
         height: 100%;
-        object-fit: contain;                /* contain inside the 240px area */
+        object-fit: contain;
         display: block;
       }
 
@@ -38,24 +38,38 @@
       .grid__item {
         display: flex;
         flex-direction: column;
+        padding-bottom: 20px; /* extra breathing room near the button */
       }
       .grid__item h4 { margin: 4px 0 6px; }
+
+      /* More margin under paragraph to avoid crowding the button */
       .grid__item p {
-        margin-bottom: 12px;
+        margin-bottom: 16px; /* desktop */
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        word-break: break-word;
       }
-      .card__actions { margin-top: auto; padding-bottom: 12px; }
 
-      /* Responsive tweaks if you want the media a bit taller on small screens
-         (optional: comment these out if not wanted) */
-      @media (max-width: 750px) {
-        .card__media { height: 260px; }
+      .card__actions {
+        margin-top: auto;        /* keeps buttons aligned at bottom in tall tiles */
+        padding-top: 8px;        /* cushion above button */
+        padding-bottom: 16px;    /* a bit more below */
       }
+
+      /* Tablet: slightly smaller media height, larger paragraph spacing */
+      @media (max-width: 750px) {
+        .card__media { height: 240px; }     /* down from previous 260 to free space */
+        .grid__item p { margin-bottom: 18px; }
+        .card__actions { padding-top: 10px; padding-bottom: 18px; }
+      }
+
+      /* Mobile: reduce media height a touch, add even more spacing */
       @media (max-width: 500px) {
-        .card__media { height: 300px; }
+        .card__media { height: 260px; }     /* was 300; gives text more room */
+        .grid__item p { margin-bottom: 20px; }
+        .card__actions { padding-top: 12px; padding-bottom: 20px; }
       }
     </style>
   </head>
