@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Page-scoped styles to lay out sections in 2 cols on desktop and loosen list spacing -->
     <style>
       .project-columns {
         display: grid;
@@ -22,18 +21,23 @@
         padding-left: 20px;
       }
       .project-columns li {
-        margin-bottom: 10px; /* increased spacing between items */
+        margin-bottom: 14px; /* more spacing between list items */
       }
       @media (min-width: 900px) {
         .project-columns {
-          grid-template-columns: 1fr 1fr; /* two columns on desktop */
-          gap: 24px;
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
         }
       }
-      /* Small nudge so the back link sits nicely under the intro */
       .backlink {
         display: inline-block;
-        margin: 8px 0 16px;
+        margin: 0 0 16px;
+      }
+      .links-row {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
       }
     </style>
   </head>
@@ -51,22 +55,23 @@
     </header>
 
     <main>
+      <!-- Backlink moved above title -->
+      <a class="backlink" href="work.html">← Back to Work</a>
       <h1>Pokédex App</h1>
+
       <p>
         The Pokédex App is a responsive JavaScript web application that enables users to discover and explore different Pokémon.
         The app fetches data from the PokéAPI and displays it in an interactive list, allowing users to view detailed information about each Pokémon.
       </p>
-      <!-- Text-styled button with arrow, directly under the description -->
-      <a class="backlink" href="work.html">← Back to Work</a>
 
-      <!-- Image placeholder (transparent PNG-friendly, shows tile color) -->
+      <!-- Image placeholder -->
       <div
         class="card__media"
         aria-label="Pokédex App preview image placeholder"
         style="height:300px;background-color:var(--grid-background);"
       ></div>
 
-      <!-- Two-column layout on desktop, single column on mobile -->
+      <!-- Two-column content -->
       <section class="project-columns">
         <div>
           <h4>Project Scope</h4>
@@ -88,12 +93,6 @@
             <li><strong>PokéAPI:</strong> Source of Pokémon data</li>
             <li><strong>GitHub Pages:</strong> Hosting and deployment</li>
           </ul>
-
-          <h4>Links</h4>
-          <p>
-            <strong>GitHub Repository:</strong> <a href="#" target="_blank" rel="noopener">Link to GitHub repo</a><br>
-            <strong>Live Website:</strong> <a href="#" target="_blank" rel="noopener">Link to hosted app</a>
-          </p>
         </div>
 
         <div style="grid-column: 1 / -1;">
@@ -104,6 +103,12 @@
             how to fetch and display data efficiently while handling user interactions smoothly.
           </p>
         </div>
+      </section>
+
+      <!-- Links row with two buttons -->
+      <section class="links-row">
+        <a href="#" target="_blank" rel="noopener" class="button">See on Github</a>
+        <a href="#" target="_blank" rel="noopener" class="button">See Live Project</a>
       </section>
     </main>
 
