@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcin's page | myFlix React Client</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      main { margin: 0 20px; }
+      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto; } }
+      .project-columns { display:grid; grid-template-columns:1fr; gap:20px; }
+      .project-columns ul { padding-left:20px; }
+      .project-columns li { margin-bottom:14px; }
+      @media (min-width: 900px) { .project-columns { grid-template-columns:1fr 1fr; gap:28px; } }
+      .backlink { display:inline-block; margin:0 0 16px; }
+      .links-row { margin:15px 0 30px; display:flex; gap:15px; flex-wrap:wrap; }
+      .project-image { height:400px; background-color:var(--grid-background); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
+      <nav>
+        <ul role="menubar">
+          <li role="presentation"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
+          <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
+          <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <a class="backlink" href="work.html">← Back to Work</a>
+      <h1>myFlix React Client</h1>
+
+      <p>
+        The myFlix client is a single-page movie application built with React. It connects to the myFlix REST API and provides movie enthusiasts with an intuitive interface to explore films, view details, and manage their personal favorites list.
+      </p>
+
+      <div class="card__media project-image" aria-label="myFlix React Client preview image placeholder"></div>
+
+      <!-- three secondary buttons (client repo, backend repo, live site) -->
+      <section class="links-row">
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">Client Repo</a>
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">Backend Repo</a>
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">Live Website</a>
+      </section>
+
+      <section class="project-columns">
+        <div>
+          <h4>Project Scope</h4>
+          <ul>
+            <li><strong>Movie Browsing &amp; Search:</strong>
+              <ul>
+                <li>Display all movies with images, titles, and descriptions</li>
+                <li>Search and filter movies by title</li>
+                <li>Navigate seamlessly through multiple views using React Router</li>
+              </ul>
+            </li>
+            <li><strong>Movie Details:</strong>
+              <ul>
+                <li>View information about a single movie, including genre and director</li>
+                <li>Add or remove a movie from the favorites list</li>
+              </ul>
+            </li>
+            <li><strong>User Accounts:</strong>
+              <ul>
+                <li>Register as a new user (username, password, email, birthday)</li>
+                <li>Log in securely and maintain session state</li>
+                <li>Update personal profile details</li>
+                <li>Deregister if desired</li>
+                <li>Display and manage a list of favorite movies</li>
+              </ul>
+            </li>
+            <li><strong>UI/UX:</strong>
+              <ul>
+                <li>Clean, responsive design using Bootstrap and custom SASS styling</li>
+                <li>State management with Redux for efficient updates</li>
+                <li>Optimized bundling and build process with Parcel</li>
+                <li>Fully deployed and accessible through Netlify</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Technology Used</h4>
+          <ul>
+            <li><strong>Client:</strong> React (ES2015+), React Router, Redux, Bootstrap 5 &amp; SASS, Parcel, Netlify</li>
+            <li><strong>Backend:</strong> myFlix REST API (Node.js, Express, MongoDB, JWT, Passport.js, CORS, MongoDB Atlas, Heroku)</li>
+          </ul>
+
+          <h4>Reflections on the Project</h4>
+          <p>
+            Developing the myFlix client was my first major experience with React, which was both exciting and challenging. I learned how to build reusable components, manage state effectively, and create a responsive user experience. Integrating the client with the API gave me valuable full-stack experience, while problem-solving issues (such as outd

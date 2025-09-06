@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcin's page | Chat App</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      main { margin: 0 20px; }
+      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto; } }
+      .project-columns { display:grid; grid-template-columns:1fr; gap:20px; }
+      .project-columns ul { padding-left:20px; }
+      .project-columns li { margin-bottom:14px; }
+      @media (min-width: 900px) { .project-columns { grid-template-columns:1fr 1fr; gap:28px; } }
+      .backlink { display:inline-block; margin:0 0 16px; }
+      .links-row { margin:15px 0 30px; display:flex; gap:15px; flex-wrap:wrap; }
+      .project-image { height:400px; background-color:var(--grid-background); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
+      <nav>
+        <ul role="menubar">
+          <li role="presentation"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
+          <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
+          <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <a class="backlink" href="work.html">← Back to Work</a>
+      <h1>Chat App</h1>
+
+      <p>
+        This page is a placeholder for the Chat App project. Replace the content below with your project description, scope, tech stack, links, and reflections.
+      </p>
+
+      <div class="card__media project-image" aria-label="Chat App preview image placeholder"></div>
+
+      <section class="links-row">
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See on Github</a>
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See Live Project</a>
+      </section>
+
+      <section class="project-columns">
+        <div>
+          <h4>Project Scope</h4>
+          <ul>
+            <li>Describe your main features and objectives here.</li>
+            <li>Add bullet points for chat features, real-time messaging, media sharing, etc.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Technology Used</h4>
+          <ul>
+            <li>List your technologies (e.g., React Native, Expo, Firebase, Firestore, Authentication).</li>
+          </ul>
+
+          <h4>Reflections on the Project</h4>
+          <p>
+            Share your learnings, challenges, and takeaways from building the Chat App.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Find me on</h3>
+      <section class="logos">
+        <img src="img/githubicon.svg" width="30" alt="Github logo">
+        <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
+        <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
+      </section>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>

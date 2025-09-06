@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcin's page | myFlix Movie API</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      main { margin: 0 20px; }
+      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto; } }
+      .project-columns { display:grid; grid-template-columns:1fr; gap:20px; }
+      .project-columns ul { padding-left:20px; }
+      .project-columns li { margin-bottom:14px; }
+      @media (min-width: 900px) { .project-columns { grid-template-columns:1fr 1fr; gap:28px; } }
+      .backlink { display:inline-block; margin:0 0 16px; }
+      .links-row { margin:15px 0 30px; display:flex; gap:15px; flex-wrap:wrap; }
+      .project-image { height:400px; background-color:var(--grid-background); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
+      <nav>
+        <ul role="menubar">
+          <li role="presentation"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
+          <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
+          <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <a class="backlink" href="work.html">← Back to Work</a>
+      <h1>myFlix Movie API</h1>
+
+      <p>
+        The myFlix API is a backend service built with Node.js, Express, and MongoDB. It serves as the server-side component for the myFlix web application, providing users with secure access to movie data, user management features, and authentication.
+      </p>
+
+      <div class="card__media project-image" aria-label="myFlix Movie API preview image placeholder"></div>
+
+      <section class="links-row">
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See on Github</a>
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See Live API</a>
+      </section>
+
+      <section class="project-columns">
+        <div>
+          <h4>Project Scope</h4>
+          <ul>
+            <li><strong>Movie Data Access:</strong>
+              <ul>
+                <li>Retrieve a list of all movies</li>
+                <li>Get detailed information about a single movie (title, description, genre, director, image)</li>
+                <li>Access data about specific genres and directors</li>
+              </ul>
+            </li>
+            <li><strong>User Management:</strong>
+              <ul>
+                <li>User registration and profile updates (username, password, email, birthday)</li>
+                <li>Add or remove movies from a user’s list of favorites</li>
+                <li>Secure authentication and authorization with JWT and Passport.js</li>
+                <li>Deregister an account if desired</li>
+              </ul>
+            </li>
+            <li><strong>Backend Design:</strong>
+              <ul>
+                <li>REST architecture with clear, tested endpoints</li>
+                <li>MongoDB database modeled with Mongoose</li>
+                <li>Middleware for logging, validation, and data security</li>
+                <li>Cross-Origin Resource Sharing (CORS) for client-side integration</li>
+              </ul>
+            </li>
+            <li><strong>Deployment:</strong>
+              <ul>
+                <li>Hosted database on MongoDB Atlas</li>
+                <li>API deployed on Heroku for public access</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Technology Used</h4>
+          <ul>
+            <li><strong>Node.js &amp; Express:</strong> Server framework and request handling</li>
+            <li><strong>MongoDB &amp; Mongoose:</strong> Database and schema modeling</li>
+            <li><strong>JWT &amp; Passport.js:</strong> Authentication and authorization</li>
+            <li><strong>CORS:</strong> Enabling cross-origin requests</li>
+            <li><strong>Heroku:</strong> API deployment</li>
+            <li><strong>MongoDB Atlas:</strong> Cloud database hosting</li>
+          </ul>
+
+          <h4>Reflections on the Project</h4>
+          <p>
+            Building the myFlix API was my first deep dive into backend development. I learned how to structure a server-side application, design RESTful endpoints, and connect them to a cloud-based database. Implementing authentication and authorization was especially challenging but rewarding, as it gave me insight into how security is managed in real-world applications. This project strengthened my understanding of the MERN stack and gave me confidence in full-stack development.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Find me on</h3>
+      <section class="logos">
+        <img src="img/githubicon.svg" width="30" alt="Github logo">
+        <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
+        <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
+      </section>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
