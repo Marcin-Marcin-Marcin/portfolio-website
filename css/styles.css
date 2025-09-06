@@ -246,7 +246,7 @@ main {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 12.5px; /* 1.25x previous 10px */
   padding: 10px;
 }
 
@@ -259,9 +259,9 @@ main {
   display: flex;
   flex-direction: column;
 
-  /* equal height without being too tall */
-  height: 320px;              /* desktop/tablet equal height */
-  overflow: hidden;           /* prevent overflow when text is long */
+  /* increased height to accommodate larger media */
+  height: 440px;             /* desktop/tablet equal height */
+  overflow: hidden;
 }
 
 .grid__item:hover {
@@ -269,11 +269,11 @@ main {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
 }
 
-/* Top media slot (PNG goes here later) */
+/* Top media slot (PNG goes here). Uses same bg as tile for transparent PNGs */
 .card__media {
   width: 100%;
-  height: 120px;              /* compact image area */
-  background-color: rgba(0, 0, 0, 0.05);
+  height: 240px;             /* 2x previous 120px */
+  background-color: var(--grid-background);
   border-radius: 6px;
   margin-bottom: 12px;
   background-size: cover;
@@ -295,9 +295,10 @@ main {
   margin-bottom: 12px;
 }
 
-/* Keep button pinned at bottom */
+/* Keep button pinned at bottom and add a little extra space below it */
 .card__actions {
   margin-top: auto;
+  padding-bottom: 12px;
 }
 
 /* ===== Profile (unchanged) ===== */
@@ -369,9 +370,8 @@ main {
 
   .grid { grid-template-columns: 1fr 1fr; }
 
-  /* slightly taller to accommodate wrapping on smaller widths */
-  .grid__item { height: 340px; }
-  .card__media { height: 130px; }
+  .grid__item { height: 470px; }  /* +130 */
+  .card__media { height: 260px; } /* 2x previous 130px */
 }
 
 @media all and (max-width: 500px) {
@@ -379,8 +379,9 @@ main {
   h3 { font-size: var(--h5-size); }
 
   .grid { grid-template-columns: 1fr; }
-  .grid__item { height: 360px; }
-  .card__media { height: 150px; }
+
+  .grid__item { height: 510px; }  /* +150 */
+  .card__media { height: 300px; } /* 2x previous 150px */
 
   .profile {
     flex-direction: column;
