@@ -11,16 +11,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-      
       .card__media-link:hover,
       .card__media-link:active {
         outline: none !important;
       }
 
-      
       .card__media-link {
         text-decoration: none;
         display: inline-block;
+      }
+
+      .card__media img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
       }
     </style>
   </head>
@@ -44,7 +49,9 @@
         <!-- Pokedex -->
         <article class="grid__item">
           <a href="pokedex.html" class="card__media-link" aria-label="Open Pokedex App project">
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media">
+              <img src="img/pokedex.png" alt="Preview of the Pokedex App project">
+            </div>
           </a>
           <h4>Pokedex App</h4>
           <p>A small app that fetches Pokémon data from an API.</p>
@@ -56,7 +63,9 @@
         <!-- Movie API -->
         <article class="grid__item">
           <a href="movie-api.html" class="card__media-link" aria-label="Open Movie API project">
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media">
+              <img src="img/api.png" alt="Preview of the Movie API project">
+            </div>
           </a>
           <h4>Movie API</h4>
           <p>Server-side API for movie data and user management.</p>
@@ -68,7 +77,9 @@
         <!-- myFlix -->
         <article class="grid__item">
           <a href="myflix.html" class="card__media-link" aria-label="Open myFlix project">
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media">
+              <img src="img/myflix.png" alt="Preview of the myFlix project">
+            </div>
           </a>
           <h4>myFLix</h4>
           <p>Client-side movie app built with React.</p>
@@ -80,7 +91,9 @@
         <!-- Meet App -->
         <article class="grid__item">
           <a href="meet-app.html" class="card__media-link" aria-label="Open Meet App project">
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media">
+              <img src="img/meet.png" alt="Preview of the Meet App project">
+            </div>
           </a>
           <h4>Meet App</h4>
           <p>PWA built with React and serverless functions.</p>
@@ -92,7 +105,9 @@
         <!-- Chat App -->
         <article class="grid__item">
           <a href="chat-app.html" class="card__media-link" aria-label="Open Chat App project">
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media">
+              <img src="img/chat.png" alt="Preview of the Chat App project">
+            </div>
           </a>
           <h4>Chat App</h4>
           <p>Mobile chat app built with React Native and Firebase.</p>
@@ -104,7 +119,9 @@
         <!-- MyFlix-Angular -->
         <article class="grid__item">
           <a href="#" class="card__media-link" aria-label="Open MyFlix-Angular project">
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media">
+              <img src="img/myflix.png" alt="Placeholder image for MyFlix Angular project">
+            </div>
           </a>
           <h4>MyFlix-Angular</h4>
           <p>Angular version of the myFlix app.</p>
