@@ -348,6 +348,7 @@ main {
   padding: 10px;
 }
 
+/* Equal, taller-than-wide cards with a media area on top */
 .grid__item {
   background-color: #f3f6fd;
   padding: 20px 20px 25px;
@@ -357,6 +358,14 @@ main {
   -o-transition: transform 0.02s ease;
   transition: transform 0.02s ease;
   transition: transform 0.02s ease, -webkit-transform 0.02s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  aspect-ratio: 2 / 3;
 }
 
 .grid__item:hover {
@@ -367,18 +376,26 @@ main {
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
 }
 
-.grid__item:last-child {
-  -ms-grid-column: 3;
-  grid-column: 3 / 3;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
+/* Placeholder/media slot for future PNGs */
+.card__media {
+  width: 100%;
+  height: 40%;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
 }
 
-.advanced-python {
-    -ms-grid-column-span: 2;
-    grid-column: span 2;
-}
+/* Keep actions at the bottom for equal visual height */
+.card__actions { margin-top: auto; }
+
+/* Card titles are one level down: h4 */
+.grid__item h4 { margin-top: 10px; }
+
+/* removed: special spanning that made heights uneven */
+/* .grid__item:last-child { ... } */
+/* .advanced-python { ... } */
 
 .profile {
   display: -webkit-box;
@@ -539,16 +556,6 @@ main {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
-
-  .advanced-python {
-        -ms-grid-column-span: 1;
-        grid-column: span 1;
-    }
-
-  .grid__item:last-child {
-  grid-column: auto;
-  grid-row: auto;
-  }
 }
 
 @media all and (max-width: 500px) {
@@ -563,16 +570,6 @@ main {
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-  }
-
-  .advanced-python {
-        -ms-grid-column-span: 1;
-        grid-column: span 1;
-    }
-
-  .grid__item:last-child {
-  grid-column: auto;
-  grid-row: auto;
   }
 
   .profile {
