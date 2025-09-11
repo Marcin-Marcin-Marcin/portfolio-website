@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcin's page | myFlix Angular Client</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      main { margin: 0 20px; }
+      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto; } }
+
+      .project-columns { display:grid; grid-template-columns:1fr; gap:20px; }
+      .project-columns ul { padding-left:20px; }
+      .project-columns li { margin-bottom:14px; }
+      @media (min-width: 900px) { .project-columns { grid-template-columns:1fr 1fr; gap:28px; } }
+
+      .backlink { display:inline-block; margin:0 0 16px; }
+      .links-row { margin:15px 0 30px; display:flex; gap:15px; flex-wrap:wrap; }
+
+      /* Project image styling (matches other pages) */
+      .project-image {
+        height: 400px;
+        background-color: #f3f6fd;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
+      <nav>
+        <ul role="menubar">
+          <li role="presentation"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
+          <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
+          <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <a class="backlink" href="work.html">← Back to Work</a>
+      <h1>myFlix Angular Client</h1>
+
+      <p>
+        The myFlix Angular Client is a single-page application built with Angular that connects to the myFlix REST API. It enables users to explore a collection of movies, view details about genres and directors, and manage their personal profiles and favorites list.
+      </p>
+
+      <!-- Project image -->
+      <div class="project-image">
+        <img src="img/myflixangular.png" alt="Preview of the myFlix Angular Client project">
+      </div>
+
+      <!-- Links -->
+      <section class="links-row">
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See on Github</a>
+        <a href="#" target="_blank" rel="noopener" class="button__secondary">See Live Project</a>
+      </section>
+
+      <!-- Two-column content -->
+      <section class="project-columns">
+        <div>
+          <h4>Project Scope</h4>
+
+          <h5>User Authentication</h5>
+          <ul>
+            <li>Registration and login forms with Angular Material</li>
+            <li>Secure access to app features once authenticated</li>
+          </ul>
+
+          <h5>Movie Exploration</h5>
+          <ul>
+            <li>Browse a catalog of movies displayed as Angular Material cards</li>
+            <li>View detailed information for each movie</li>
+            <li>Access additional views for directors and genres directly from a movie’s details</li>
+          </ul>
+
+          <h5>User Profile Management</h5>
+          <ul>
+            <li>Update personal information</li>
+            <li>Add or remove movies from the favorites list</li>
+            <li>Deregister an account if desired</li>
+          </ul>
+
+          <h5>UI &amp; Documentation</h5>
+          <ul>
+            <li>Responsive design using Angular Material components</li>
+            <li>Routing for seamless navigation across views</li>
+            <li>Typedoc comments and JSDoc technical documentation for handoffs</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Technology Used</h4>
+          <ul>
+            <li><strong>Angular (v9+):</strong> Framework for building the client-side application</li>
+            <li><strong>Angular Material:</strong> UI components and styling</li>
+            <li><strong>TypeDoc &amp; JSDoc:</strong> Code comments and technical documentation</li>
+            <li><strong>Node.js &amp; npm:</strong> Development environment</li>
+            <li><strong>GitHub Pages:</strong> Hosting and deployment</li>
+          </ul>
+        </div>
+
+        <div style="grid-column: 1 / -1;">
+          <h4>Reflections on the Project</h4>
+          <p>
+            Working on the myFlix Angular Client gave me the opportunity to deepen my skills in a second modern frontend framework beyond React. Using Angular Material streamlined the UI design process and taught me how to work with pre-built, accessible components. This project also highlighted the importance of documentation — producing Typedoc and JSDoc comments improved my ability to communicate technical details clearly and create reliable handoffs for other developers.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Find me on</h3>
+      <section class="logos">
+        <img src="img/githubicon.svg" width="30" alt="Github logo">
+        <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
+        <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
+      </section>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>
