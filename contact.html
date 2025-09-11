@@ -10,38 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Material Symbols for icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" rel="stylesheet">
     <style>
       main { margin: 0 20px 60px; }
-      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto 80px; } }
+      @media (min-width: 900px){ main { max-width: 60%; margin: 0 auto 80px; } }
 
-      .lead {
-        margin-bottom: 18px;
-      }
-
-      .contact-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-      @media (min-width: 900px) {
-        .contact-grid {
-          grid-template-columns: 1fr 1fr; /* info left, form right */
-          gap: 36px;
-        }
-      }
-
-      .card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-shadow: 0 6px 14px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.06);
-      }
+      .lead { margin-bottom: 18px; }
 
       .contact-table {
         width: 100%;
         border-collapse: collapse;
+        margin-bottom: 24px;
       }
       .contact-table thead { display: none; }
       .contact-table td {
@@ -57,7 +36,7 @@
         font-size: 22px;
         line-height: 1;
         vertical-align: middle;
-        color: var(--primary-color, #0a3fff);
+        color: #b0b5bf;
       }
       .label-cell {
         width: 140px;
@@ -65,6 +44,12 @@
       }
       .data-cell a { word-break: break-word; }
 
+      .form-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 18px 20px;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.06);
+      }
       .form-card label {
         display: inline-block;
         margin-bottom: 6px;
@@ -84,8 +69,6 @@
       .form-row { margin-bottom: 14px; }
       .form-actions { margin-top: 8px; }
       .terms { font-size: 14px; }
-
-      .contact-actions { margin-top: 8px; margin-bottom: 8px; }
     </style>
   </head>
   <body>
@@ -103,87 +86,80 @@
 
     <main>
       <h1>Contact Marcin</h1>
+      <h3>Get in touch</h3>
       <p class="lead">
-        <strong>Get in touch</strong><br>
         Please fill out the form on this section to contact with me or send me an email.
         You can also call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday.
       </p>
 
-      <section class="contact-grid">
-        <div class="card">
-          <table class="contact-table" aria-label="Contact details">
-            <tbody>
-              <tr>
-                <td class="icon-cell" aria-hidden="true">
-                  <span class="material-symbols-outlined">call</span>
-                </td>
-                <td class="label-cell">Telephone</td>
-                <td class="data-cell">
-                  <a href="tel:+4917621832353">+49 176 21832353</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="icon-cell" aria-hidden="true">
-                  <span class="material-symbols-outlined">mail</span>
-                </td>
-                <td class="label-cell">Email</td>
-                <td class="data-cell">
-                  <a href="mailto:mtbiesiada@gmail.com">mtbiesiada@gmail.com</a>
-                </td>
-              </tr>
-              <tr>
-                <td class="icon-cell" aria-hidden="true">
-                  <span class="material-symbols-outlined">code</span>
-                </td>
-                <td class="label-cell">GitHub</td>
-                <td class="data-cell">
-                  <a href="https://github.com/Marcin-Marcin-Marcin" target="_blank" rel="noopener">
-                    github.com/Marcin-Marcin-Marcin
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="contact-actions">
-            <h5><a href="mailto:mtbiesiada@gmail.com">Send me an email</a></h5>
+      <table class="contact-table" aria-label="Contact details">
+        <tbody>
+          <tr>
+            <td class="icon-cell" aria-hidden="true">
+              <span class="material-symbols-outlined">call</span>
+            </td>
+            <td class="label-cell">Telephone</td>
+            <td class="data-cell">
+              <a href="tel:+4917621832353">+49 176 21832353</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="icon-cell" aria-hidden="true">
+              <span class="material-symbols-outlined">mail</span>
+            </td>
+            <td class="label-cell">Email</td>
+            <td class="data-cell">
+              <a href="mailto:mtbiesiada@gmail.com">mtbiesiada@gmail.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="icon-cell" aria-hidden="true">
+              <span class="material-symbols-outlined">code</span>
+            </td>
+            <td class="label-cell">GitHub</td>
+            <td class="data-cell">
+              <a href="https://github.com/Marcin-Marcin-Marcin" target="_blank" rel="noopener">
+                github.com/Marcin-Marcin-Marcin
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="form-card">
+        <h3>Contact</h3>
+        <form
+          id="contact-form"
+          action="mailto:mtbiesiada@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" placeholder="Your Name*" required>
           </div>
-        </div>
 
-        <div class="card form-card">
-          <h3>Contact</h3>
-          <form
-            id="contact-form"
-            action="mailto:mtbiesiada@gmail.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="Name" placeholder="Your Name*" required>
-            </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="Your Email*" required>
+          </div>
 
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="Email" placeholder="Your Email*" required>
-            </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="Your Message"></textarea>
+          </div>
 
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea id="message" name="Message" placeholder="Your Message"></textarea>
-            </div>
+          <div class="form-row terms">
+            <label>
+              <input type="checkbox" id="checkbox" name="Terms accepted" required>
+              I read and understood <a href="#">Terms and Conditions</a>
+            </label>
+          </div>
 
-            <div class="form-row terms">
-              <label>
-                <input type="checkbox" id="checkbox" name="Terms accepted" required>
-                I read and understood <a href="#">Terms and Conditions</a>
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" id="button">Send</button>
-            </div>
-          </form>
-        </div>
+          <div class="form-actions">
+            <button type="submit" id="button">Send</button>
+          </div>
+        </form>
       </section>
     </main>
 
