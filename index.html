@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Marcin's page | About</title>
-        <link rel="shortcut icon" href="./img/favicon-32x32.png">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
-            <nav>
-                <ul role="menubar">
-                    <li role="presentation"> <a role="menuitem" href="index.html">Home</a></li>
-                    <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
-                    <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
-                    <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="profile">
-                <img src="img/marcin_portrait.jpg" alt="Portrait of Marcin wearing glasses and a black shirt" class="profile__portrait">
-                <div class="profile__text">
-                    <h1>Welcome to my portfolio</h1>
-                    <h3>I’m Marcin, a web developer based in Berlin.</h3>
-                    <p>Feel free to explore my projects in the Work section and learn more about me in the About section!</p>
-                    <p></p>
-                    <a href="work.html" class="button">Explore my Work</a>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <h4>Find me on</h4>
-            <section class="logos">
-                 <!--- Github logo-->
-                <img src="img/githubicon.svg" width="30" alt="Github logo">
-                <!--- Bluesky logo-->
-                <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
-                <!--- Linkedin logo-->
-                <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
-            </section>
-        </footer>
-        <script src="js/tota11y.min.js"></script>
-   </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcin's page | About</title>
+    <link rel="shortcut icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      main { margin: 0 20px; }
+      @media (min-width: 900px) {
+        main {
+          max-width: 70%;   /* slightly wider than before */
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" width="45" alt="Marcin's logo consisting of capital letters M and B joined together at the arm">
+      <nav>
+        <ul role="menubar">
+          <li role="presentation"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="presentation"><a role="menuitem" href="about.html">About</a></li>
+          <li role="presentation"><a role="menuitem" href="contact.html">Contact</a></li>
+          <li role="presentation"><a role="menuitem" href="work.html">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="profile">
+        <img src="img/marcin_portrait.jpg" alt="Portrait of Marcin wearing glasses and a black shirt" class="profile__portrait">
+        <div class="profile__text">
+          <h1>Welcome to my portfolio</h1>
+          <h3>I’m Marcin, a web developer based in Berlin.</h3>
+          <p>Feel free to explore my projects in the Work section and learn more about me in the About section!</p>
+          <a href="work.html" class="button">Explore my Work</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <h4>Find me on</h4>
+      <section class="logos">
+        <img src="img/githubicon.svg" width="30" alt="Github logo">
+        <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
+        <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
+      </section>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
+  </body>
 </html>
