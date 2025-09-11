@@ -11,30 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-      /* Page container width + extra space before footer */
-      main { margin: 0 20px 48px; }
-      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto 64px; } }
+      main { margin: 0 20px 64px; }
+      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto 80px; } }
 
-      /* Two-column layout for About */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 28px;
-        align-items: start;
-      }
-      @media (max-width: 750px) {
-        .about-grid { grid-template-columns: 1fr; gap: 20px; }
-      }
-
-      /* Text spacing */
       .about-text p { margin-bottom: 12px; }
-      .about-actions { margin-top: 24px; } /* more space above the button */
+      .about-actions { margin-top: 24px; margin-bottom: 32px; } /* extra space before table */
 
-      /* Sleek skills card */
+      /* Skills card centered */
       .skills-card {
         background: #fff;
         border-radius: 10px;
         padding: 20px;
+        max-width: 600px;
+        margin: 0 auto; /* center horizontally */
         box-shadow: 0 6px 14px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.06);
       }
 
@@ -48,7 +37,7 @@
         margin-bottom: 12px;
       }
       .skills-table thead th {
-        text-align: left; /* language names left-aligned */
+        text-align: left;
         font-weight: 700;
         padding: 10px 0;
         border-bottom: 1px solid rgba(0,0,0,0.06);
@@ -57,6 +46,9 @@
       .skills-table tbody td {
         padding: 14px 0;
         vertical-align: middle;
+      }
+      .skills-table tbody th {
+        text-align: left; /* left align skill labels */
       }
       .skills-table tbody tr + tr td,
       .skills-table tbody tr + tr th {
@@ -73,10 +65,10 @@
       .skill-segment {
         height: 12px;
         border-radius: 3px;
-        background: #e6e9ef; /* light grey unfilled */
+        background: #e6e9ef;
       }
       .skill-segment.filled {
-        background: var(--primary-color, #0a3fff); /* primary button blue */
+        background: var(--primary-color, #0a3fff);
       }
     </style>
   </head>
@@ -94,87 +86,84 @@
     </header>
 
     <main>
-      <section class="about-grid">
-        <!-- Left column: text -->
-        <div class="about-text">
-          <h1 id="about">About Me</h1>
-          <h4>My name is Marcin, and I’m a web developer and designer living in Berlin.</h4>
-          <p>
-            I’m primarily a designer who can also tackle web development, passionate about creating user-friendly
-            technology that makes life better. My goal is to enhance human potential through meaningful digital experiences.
-          </p>
-          <p>In my free time, I enjoy listening to music, reading, and spending time with friends.</p>
-          <div class="about-actions">
-            <a href="files/mbcv.pdf" class="button" download>Download my CV</a>
-          </div>
+      <section class="about-text">
+        <h1 id="about">About Me</h1>
+        <h4>My name is Marcin, and I’m a web developer and designer living in Berlin.</h4>
+        <p>
+          I’m primarily a designer who can also tackle web development, passionate about creating user-friendly
+          technology that makes life better. My goal is to enhance human potential through meaningful digital experiences.
+        </p>
+        <p>In my free time, I enjoy listening to music, reading, and spending time with friends.</p>
+        <div class="about-actions">
+          <a href="files/mbcv.pdf" class="button" download>Download my CV</a>
         </div>
+      </section>
 
-        <!-- Right column: skills -->
-        <aside class="skills-card" aria-labelledby="skills-heading">
-          <table class="skills-table">
-            <caption id="skills-heading">My skills and experience</caption>
-            <thead>
-              <tr>
-                <th scope="col">Skill</th>
-                <th scope="col">Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">HTML</th>
-                <td>
-                  <div class="skill-bar" aria-label="HTML level 5 out of 6" role="img">
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment"></span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">CSS</th>
-                <td>
-                  <div class="skill-bar" aria-label="CSS level 5 out of 6" role="img">
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment"></span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">JavaScript</th>
-                <td>
-                  <div class="skill-bar" aria-label="JavaScript level 4 out of 6" role="img">
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment"></span>
-                    <span class="skill-segment"></span>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">TypeScript</th>
-                <td>
-                  <div class="skill-bar" aria-label="TypeScript level 4 out of 6" role="img">
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment filled"></span>
-                    <span class="skill-segment"></span>
-                    <span class="skill-segment"></span>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </aside>
+      <!-- Skills section centered -->
+      <section class="skills-card" aria-labelledby="skills-heading">
+        <table class="skills-table">
+          <caption id="skills-heading">My skills and experience</caption>
+          <thead>
+            <tr>
+              <th scope="col">Skill</th>
+              <th scope="col">Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">HTML</th>
+              <td>
+                <div class="skill-bar" aria-label="HTML level 5 out of 6" role="img">
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">CSS</th>
+              <td>
+                <div class="skill-bar" aria-label="CSS level 5 out of 6" role="img">
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">JavaScript</th>
+              <td>
+                <div class="skill-bar" aria-label="JavaScript level 4 out of 6" role="img">
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment"></span>
+                  <span class="skill-segment"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">TypeScript</th>
+              <td>
+                <div class="skill-bar" aria-label="TypeScript level 4 out of 6" role="img">
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment filled"></span>
+                  <span class="skill-segment"></span>
+                  <span class="skill-segment"></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
 
