@@ -11,9 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-      /* Page container width matches other pages on mobile and centers on desktop */
-      main { margin: 0 20px; }
-      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto; } }
+      /* Page container width + extra space before footer */
+      main { margin: 0 20px 48px; }
+      @media (min-width: 900px){ main { max-width: 75%; margin: 0 auto 64px; } }
 
       /* Two-column layout for About */
       .about-grid {
@@ -26,12 +26,18 @@
         .about-grid { grid-template-columns: 1fr; gap: 20px; }
       }
 
-      /* Lean skills table */
+      /* Text spacing */
+      .about-text p { margin-bottom: 12px; }
+      .about-actions { margin-top: 24px; } /* more space above the button */
+
+      /* Sleek skills card */
       .skills-card {
-        background: var(--grid-background);
-        border-radius: 6px;
+        background: #fff;
+        border-radius: 10px;
         padding: 20px;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.06);
       }
+
       .skills-table {
         width: 100%;
         border-collapse: collapse;
@@ -42,14 +48,14 @@
         margin-bottom: 12px;
       }
       .skills-table thead th {
-        text-align: left;
+        text-align: left; /* language names left-aligned */
         font-weight: 700;
-        padding: 8px 0;
+        padding: 10px 0;
         border-bottom: 1px solid rgba(0,0,0,0.06);
       }
       .skills-table tbody th,
       .skills-table tbody td {
-        padding: 12px 0;
+        padding: 14px 0;
         vertical-align: middle;
       }
       .skills-table tbody tr + tr td,
@@ -65,17 +71,13 @@
         align-items: center;
       }
       .skill-segment {
-        height: 10px;
-        border-radius: 2px;
-        background: #e6e6e6; /* light grey for unfilled */
+        height: 12px;
+        border-radius: 3px;
+        background: #e6e9ef; /* light grey unfilled */
       }
       .skill-segment.filled {
-        background: var(--primary-color); /* primary blue for filled */
+        background: var(--primary-color, #0a3fff); /* primary button blue */
       }
-
-      /* Tweak paragraph spacing */
-      .about-text p { margin-bottom: 12px; }
-      .about-actions { margin-top: 16px; }
     </style>
   </head>
   <body>
@@ -96,7 +98,7 @@
         <!-- Left column: text -->
         <div class="about-text">
           <h1 id="about">About Me</h1>
-          <h3>My name is Marcin, and I’m a web developer and designer living in Berlin.</h3>
+          <h4>My name is Marcin, and I’m a web developer and designer living in Berlin.</h4>
           <p>
             I’m primarily a designer who can also tackle web development, passionate about creating user-friendly
             technology that makes life better. My goal is to enhance human potential through meaningful digital experiences.
@@ -179,11 +181,8 @@
     <footer>
       <h3>Find me on</h3>
       <section class="logos">
-        <!--- Github logo-->
         <img src="img/githubicon.svg" width="30" alt="Github logo">
-        <!--- Bluesky logo-->
         <img src="img/blueskyicon.svg" width="30" alt="Bluesky logo">
-        <!--- Linkedin logo-->
         <img src="img/linkedinicon.svg" width="30" alt="Linkedin logo">
       </section>
     </footer>
